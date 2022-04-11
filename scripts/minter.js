@@ -14,12 +14,12 @@ async function main() {
   // await hre.run('compile');
 
   // We get the contract to deploy
-  const ERC721 = await hre.ethers.getContractFactory("ERC721");
-  const erc721 = await ERC721.deploy("XYZLOTTERY","XYZL");
+  const Minter = await hre.ethers.getContractFactory("Minter");
+  const minter = await Minter.deploy("Minter","MNT");
 
-  await erc721.deployed();
+  await minter.deployed();
 
-  console.log("ERC721 deployed to:", erc721.address);
+  console.log("Minter NFT deployed to:", minter.address);
 }
 
 // We recommend this pattern to be able to use async/await everywhere

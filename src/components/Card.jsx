@@ -14,22 +14,14 @@ export default class Card extends Component {
             <h5 className="card-title">
               <div className="d-flex justify-content-between">
                 <div>Item #{this.props.id}</div>
-                <h6 className="font-sm">Bet: ${this.props.bet}, Buy: ${this.props.price}</h6>
+                <h6 className="font-sm"><a href=".">0x288...</a></h6>
               </div>
             </h5>
-            <p className="card-text">
-                {this.props.description}
-            </p>
-            <div className="input-group">
-              <input className="form-control" type="text" />
-              <div className="input-group-append">
-                <button className="btn btn-outline-primary mx-1" type="button">
-                Bet
-                </button>
-                <button className="btn btn-outline-primary" type="button">
-                  Buy
-                </button>
-              </div>
+            <p className="card-text">{this.props.description}</p>
+            <div className="d-flex justify-content-end">
+              <button className="btn btn-outline-primary" type="button">
+                Mint
+              </button>
             </div>
           </div>
         </div>

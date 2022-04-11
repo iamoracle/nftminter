@@ -1,15 +1,19 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
+import { BrowserRouter, Routes, Route } from "react-router-dom";
+
 import {
   ContractKitProvider,
   Alfajores,
   NetworkNames,
 } from '@celo-tools/use-contractkit';
-import App from './App';
 import 'bootstrap-icons/font/bootstrap-icons.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import "@celo-tools/use-contractkit/lib/styles.css";
 import "react-toastify/dist/ReactToastify.min.css";
+
+// pages import
+import Home from './pages/Home'
 
 ReactDOM.render(
   <React.StrictMode>
@@ -28,7 +32,11 @@ ReactDOM.render(
         url: 'https://github.com/iamoracle/xyzlottery',
       }}
     >
-      <App />
+      <BrowserRouter>
+      <Routes>
+        <Route path="/" element={<Home />} />
+      </Routes>
+      </BrowserRouter>
     </ContractKitProvider>  
   </React.StrictMode>,
   document.getElementById('root')
